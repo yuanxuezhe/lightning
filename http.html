@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+import axios from 'axios'
+
+async function get() {
+
+    // 定义 data 数据对象
+    const data = {
+        name: "wangwu",
+        age: 30
+    }
+    // 格式化成 json 字符串
+    const _data = JSON.stringify(data)
+
+    // 使用 axios 发送请求
+    let resp = await axios({
+        method: "get",
+        url: "http://192.168.2.3:8082/param=dsadsdsadasdsadwqewewewsds",
+        data: _data,
+    })
+
+    // 输出结果， 成功获取
+    // { ID: 'id12312312', Money: 300, Data: { name: 'wangwu', age: 30 } }
+    console.log(resp.data); 
+
+}
+
+// node main.js
+get() 
+</script>
+</html>
