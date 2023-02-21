@@ -1,11 +1,12 @@
 package network
 
 import (
-	conn "gitee.com/yuanxuezhe/ynet/Conn"
 	"log"
 	"net"
 	"sync"
 	"time"
+
+	conn "github.com/yuanxuezhe/lightning/Conn"
 )
 
 type TCPClient struct {

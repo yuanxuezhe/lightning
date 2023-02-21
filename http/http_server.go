@@ -1,11 +1,12 @@
 package network
 
 import (
-	conn "gitee.com/yuanxuezhe/ynet/Conn"
 	"log"
 	"net"
 	"net/http"
 	"time"
+
+	conn "github.com/yuanxuezhe/lightning/Conn"
 )
 
 type HttpServer struct {

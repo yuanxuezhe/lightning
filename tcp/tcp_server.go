@@ -1,11 +1,12 @@
 package network
 
 import (
-	conn "gitee.com/yuanxuezhe/ynet/Conn"
 	"log"
 	"net"
 	"sync"
 	"time"
+
+	conn "github.com/yuanxuezhe/lightning/Conn"
 )
 
 type TCPServer struct {
@@ -29,7 +30,7 @@ func (server *TCPServer) Start() {
 func (server *TCPServer) init() {
 	ln, err := net.Listen("tcp", server.Addr)
 	if err != nil {
-		log.Fatal("%v", err)
+		log.Fatal(err)
 	}
 
 	if server.MaxConnNum <= 0 {

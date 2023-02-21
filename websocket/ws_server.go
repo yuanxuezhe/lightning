@@ -1,13 +1,14 @@
 package network
 
 import (
-	conn "gitee.com/yuanxuezhe/ynet/Conn"
-	"github.com/gorilla/websocket"
 	"log"
 	"net"
 	"net/http"
 	"sync"
 	"time"
+
+	"github.com/gorilla/websocket"
+	conn "github.com/yuanxuezhe/lightning/Conn"
 )
 
 type WSServer struct {
